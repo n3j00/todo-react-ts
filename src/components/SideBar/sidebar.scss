@@ -1,0 +1,65 @@
+@import '../../global.scss';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-color-secondary;
+  color: $font-color-light;
+
+  .menu {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: $bg-blue-dark;
+
+    .links {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .link {
+        text-decoration: none;
+        color: $font-color-light;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $font-color-light;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  button {
+    z-index: 9999;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    top: 25px;
+    left: 25px;
+
+    button:active {
+      outline: none;
+    }
+    button:focus {
+      outline: none;
+    }
+
+    cursor: pointer;
+  }
+}

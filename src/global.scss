@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+$bg-color-dark: #242424;
+$bg-color-secondary: #333333;
+$font-color-light: #ffffff;
+$font-color-dark: #f2f2f2;
+$font-color-yellow: #f2f200;
+$bg-blue-dark: #2e4271;
+$bg-blue-light: #3e5c9a;
+$form-bg-color-dark: #353535;
+$form-bg-color-light: #4a4a4a;
+$button-color-green: #4caf50;
+$button-color-red: #ff5733;
+
+$red-bg-color: #ff5733;
+
+@mixin mobile-device {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-device {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop-device {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+html,
+body,
+#root {
+  font-family: 'Play', sans-serif;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+:root {
+  --toastify-font-family: 'Play', sans-serif;
+}
+
+body {
+  background-color: $bg-color-dark;
+  color: $font-color-light;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $bg-blue-dark;
+  border-radius: 10px;
+}
+
+.classic-button {
+  padding: 10px 20px;
+  border: 1px solid $bg-blue-dark;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: $bg-blue-dark;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $bg-blue-dark;
+    color: $font-color-light;
+  }
+}
+
+.button-red {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $button-color-red;
+    color: $font-color-light;
+  }
+}
+.button-green {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $button-color-green;
+    color: $font-color-light;
+  }
+}

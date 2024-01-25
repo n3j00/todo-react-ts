@@ -1,0 +1,58 @@
+@import '../../global.scss';
+
+.startup-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .create-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .animation-startup {
+      height: 300px;
+      width: 500px;
+    }
+  }
+  .signup-form {
+    margin-top: 100px;
+    border: 5px dotted $bg-blue-dark;
+
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $font-color-light;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 50%;
+      height: 40px;
+      margin-bottom: 20px;
+
+      padding: 0 10px;
+      border: 1px solid $bg-blue-dark;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $bg-blue-dark;
+      transition: all 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $bg-blue-dark;
+        box-shadow: 0 0 5px $bg-blue-dark;
+      }
+    }
+  }
+}

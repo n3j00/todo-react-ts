@@ -1,0 +1,54 @@
+@import '../../global.scss';
+
+.footer {
+  height: 100px;
+  border-top: dotted 5px $bg-blue-dark;
+
+  .footer-wrapper {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .rights {
+      flex: 1;
+      span {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $font-color-light;
+      }
+    }
+    .name {
+      flex: 1;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $font-color-light;
+      }
+    }
+    .footer-links {
+      display: flex;
+      gap: 15px;
+
+      .link {
+        text-decoration: none;
+        color: #f9f9f9;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: #f9f9f9;
+          transform: scale(1.1);
+        }
+
+        @include mobile-device {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../global.scss';
+
+.navbar {
+  height: 100px;
+  border-bottom: dotted 5px $bg-blue-dark;
+
+  .nav-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $font-color-light;
+      cursor: pointer;
+    }
+
+    .username {
+      display: flex;
+      gap: 15px;
+
+      .link {
+        text-decoration: none;
+        color: #f9f9f9;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #f9f9f9;
+          transform: scale(1.05);
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        border: 1px solid $bg-blue-dark;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $bg-blue-dark;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $button-color-red;
+          color: $font-color-light;
+        }
+      }
+
+      @include mobile-device {
+        .nav-wrapper {
+          justify-content: space-between;
+        }
+        .link {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

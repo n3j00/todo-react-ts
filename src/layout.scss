@@ -1,0 +1,59 @@
+@import './global.scss';
+
+.locked {
+  display: none;
+
+  @include mobile-device {
+    display: flex;
+    margin-top: 200px;
+    padding: 10px;
+    border: 2px dotted $bg-blue-dark;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $button-color-red;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $button-color-green;
+      margin-bottom: 20px;
+    }
+  }
+  @include tablet-device {
+    display: flex;
+    margin-top: 200px;
+    padding: 10px;
+    border: 2px dotted $bg-blue-dark;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $button-color-red;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $button-color-green;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.approved {
+  @include mobile-device {
+    display: none;
+  }
+  @include tablet-device {
+    display: none;
+  }
+}

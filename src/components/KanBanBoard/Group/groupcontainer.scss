@@ -1,0 +1,103 @@
+@import '../../../global.scss';
+
+.dragging-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.5;
+  align-items: center;
+  width: 300px;
+  height: 600px;
+  max-height: 600px;
+  background-color: $bg-color-dark;
+  border: 2px dotted $red-bg-color;
+  border-radius: 10px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  max-height: 600px;
+  height: 600px;
+  background-color: $form-bg-color-dark;
+  border-radius: 10px;
+  padding: 5px;
+
+  .group-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    width: 100%;
+
+    border-bottom: 5px solid $form-bg-color-light;
+    cursor: grab;
+
+    .edit-button {
+      background-color: $form-bg-color-light;
+      height: 100%;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .edit {
+      color: $red-bg-color;
+    }
+
+    .icon {
+      color: $red-bg-color;
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      background-color: $form-bg-color-light;
+      border: none;
+      padding: 5px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $font-color-light;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .group-tasks {
+    display: flex;
+    margin-top: 10px;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .button-add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    background-color: $form-bg-color-light;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $button-color-green;
+    }
+
+    .plus-icon {
+      color: black;
+      font-size: 1rem;
+    }
+  }
+}
