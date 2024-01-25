@@ -11,7 +11,7 @@ const StartUp = () => {
   const handleUserSubmit = () => {
     if (inputValue.trim() !== '') {
       createUser(inputValue);
-      window.location.href = '/todo-react-ts/todo';
+      window.location.reload();
     }
   };
   return (

@@ -10,7 +10,7 @@ const NavBar = ({ username }: { username: string }) => {
 
   const handleDeleteData = () => {
     deleteUser();
-    navigate('/');
+    navigate('/todo-react-ts/todo');
 
     window.location.reload();
   };
