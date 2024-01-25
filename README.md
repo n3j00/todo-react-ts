@@ -7,6 +7,9 @@ Author: n3j00 / nejoo Nikodem Stach
 
 Welcome to the React-Todo-Typescript demo app! This application helps you manage your daily tasks. With this app, you can easily CREATE, UPDATE, and DELETE your groups and tasks. The app utilizes the DND Kit, allowing you to move your tasks between different groups and change their index and position within the group.
 
+## IMPORTANT
+App is using LocalStorage to save your data in your browser!!!
+
 ## Responsive
 Currently, the app is not mobile responsive; it is designed only for desktop devices.
 
