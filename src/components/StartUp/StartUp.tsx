@@ -4,13 +4,16 @@ import './startup.scss';
 //Main imports and helpers
 import { useState } from 'react';
 import { createUser } from '../../helpers/crud';
+import { useNavigate } from 'react-router-dom';
 
 const StartUp = () => {
   const [inputValue, setInputValue] = useState('');
+  const navigate = useNavigate();
 
   const handleUserSubmit = () => {
     if (inputValue.trim() !== '') {
       createUser(inputValue);
+      navigate('/todo-react-ts/');
       window.location.reload();
     }
   };

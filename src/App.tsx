@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/todo-react-ts/todo',
         element: <ToDo />,
-        errorElement: <div></div>,
+        errorElement: <div>Not Found</div>,
       },
     ],
   },
